@@ -1,0 +1,27 @@
+.container {
+    background-color: red;
+    padding: 0; margin: 0;
+}
+.crad {
+    display: grid;
+    /* 1fr(비율)을 4번 반복하여 4열로 만듦 */
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 25px; /* 카드 사이 간격 */
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* 최대폭 제한하고 */
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+/* 모바일 화면 */
+@media screen and (max-width: 1000px) {
+    .crad {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .crad {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
