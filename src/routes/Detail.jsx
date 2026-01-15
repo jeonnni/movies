@@ -40,7 +40,14 @@ function Detail (){
       }
     }
     useEffect(() => {
-        getMovies();      
+        document.body.style.overflow = "hidden";
+        window.scrollTo(0, 0);  
+        
+        getMovies();   
+
+        return () => {
+          document.body.style.overflow = "";
+        }
     }, [id]);
 
     console.log(movie);
@@ -48,7 +55,7 @@ function Detail (){
     return (
       <div className={styles.container}>
         {loading ? (
-          <h1>Loading...</h1>
+          <strong>Loading...</strong>
         ) : (
           <div
             className={styles.detail}

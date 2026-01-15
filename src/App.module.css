@@ -16,19 +16,17 @@ body {
     font-size: 15px;
     line-height: 1.5;
     background-color: black;
-    /* 정중앙 정렬 */
-    /* display: flex;
-    justify-content: center; 
-    align-items: center;    
-    min-height: 100vh;       */
 }
 
 h1 , h2{font-family: 'Noto Sans KR', sans-serif !important;}
 
-
 /* 로딩 메시지 */
-.container strong {
+strong {
     display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     color: #888;
     font-weight: 400;
     animation: pulse 1.5s infinite;

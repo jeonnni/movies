@@ -20,8 +20,8 @@ function Home (){
         const options = {
             method: "GET",
             headers: {
-            Authorization: `Bearer ${token.trim()}`,
-            accept: "application/json",
+                Authorization: `Bearer ${token.trim()}`,
+                accept: "application/json",
             },
         };
 
@@ -45,25 +45,25 @@ function Home (){
     console.log(movies);
 
     return (
-      <div className={styles.container}>
-        {loading ? (
-          <strong>loading...</strong>
-        ) : (
-          <div className={styles.crad}>
-            {movies.map((movie) => (
-              <Movie
-                key={movie.id}
-                id={movie.id}
-                title={movie.title}
-                coverImage={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                overview={movie.overview}
-                vote_average={movie.vote_average}
-                release_date={movie.release_date}
-              />
-            ))}
-          </div>
-        )}
-      </div>
+        <div className={styles.container}>
+            {loading ? (
+            <strong>loading...</strong>
+            ) : (
+            <div className={styles.crad}>
+                {movies.map((movie) => (
+                <Movie
+                    key={movie.id}
+                    id={movie.id}
+                    title={movie.title}
+                    coverImage={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                    overview={movie.overview}
+                    vote_average={movie.vote_average}
+                    release_date={movie.release_date}
+                />
+                ))}
+            </div>
+            )}
+        </div>
     );
 }
 
