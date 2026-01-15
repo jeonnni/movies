@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./Movie.module.css";
+import StarRating from "./StarRating";
 
 function Movie({
   id,
@@ -10,6 +11,7 @@ function Movie({
   vote_average,
   release_date,
 }) {
+  
   return (
     <div className={styles.movie_card}>
       <Link to={`/movie/${id}`}>
@@ -17,14 +19,17 @@ function Movie({
         <img src={coverImage} alt={title} title={title} />
       </Link>
 
-      <div>
+      <div className={styles.movie_detail}>
         {/* 제목 & 연도 (연도는 2025-11-05에서 앞 4자리만 자르기) */}
-        <h2>
+        <h3>
           {title} ({release_date ? release_date.split("-")[0] : "정보없음"})
-        </h2>
+        </h3>
 
         {/* 평점 (소수점 첫째자리까지) */}
-        <h4>⭐ {vote_average.toFixed(1)}</h4>
+        {/* <h4>⭐ {vote_average.toFixed(1)}</h4> */}
+        <h4>
+          <StarRating rating={Number(vote_average.toFixed(1))} />
+        </h4>
 
         {/* 줄거리 요약 */}
         <p>
