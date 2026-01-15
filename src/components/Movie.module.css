@@ -1,18 +1,16 @@
 .movie_card {
   background-color: #2f2f2f;
   border-radius: 10px;
-  overflow: hidden; /* 이미지가 튀어나오지 않게 */
+  overflow: hidden; 
   width: 100%;
-  /* position: relative; */
-  /* transition: transform 0.3s ease; */
   color: white;
   
 }
 
 .movie_card:hover {
-  /* background-color: #2f2f2f; */
   z-index: 1;
 }
+
 .movie_card a {
   display: block;
   overflow: hidden;
@@ -34,6 +32,7 @@
 /* 이미지 아래 설명 */
 .movie_detail {
   padding: 15px;
+  cursor: default;
 }
 
 /* 줄거리 요약 */

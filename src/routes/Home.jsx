@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import styles from "./Home.module.css"
 
+// 전체 목록 페이지
 function Home (){
     const [loading, setLoading] = useState(true);
     const [movies, setMovies] = useState([]);

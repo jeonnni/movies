@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./Movie.module.css";
 import StarRating from "./StarRating";
 
+// 영화 카드
 function Movie({
   id,
   title,
@@ -26,7 +27,6 @@ function Movie({
         </h3>
 
         {/* 평점 (소수점 첫째자리까지) */}
-        {/* <h4>⭐ {vote_average.toFixed(1)}</h4> */}
         <h4>
           <StarRating rating={Number(vote_average.toFixed(1))} />
         </h4>

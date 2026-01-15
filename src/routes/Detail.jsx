@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-// import styles from "./Home.module.css";
+import { Link, useParams } from "react-router-dom";
+import styles from "./Detail.module.css";
+import StarRating from "../components/StarRating";
+import { IoArrowBackCircle } from "react-icons/io5";
 
+// 상세 정보 페이지
 function Detail (){
     const {id} = useParams();
     const [loading, setLoading] = useState(true);
@@ -43,37 +46,40 @@ function Detail (){
     console.log(movie);
     
     return (
-      <div>
+      <div className={styles.container}>
         {loading ? (
           <h1>Loading...</h1>
         ) : (
-          <div>
-            <h1>{movie.title}</h1>
-            <img
-              src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-              alt={movie.title}
-              style={{ width: "100%" }}
-            />
-            <h1>{movie.title}</h1>
-            <h3>{movie.tagline}</h3>
-            <p>{movie.overview}</p>
-            <ul>
-              {movie.genres &&
-                movie.genres.map((g) => <li key={g.id}>{g.name}</li>)}
-            </ul>
-            <p>평점: {movie.vote_average}</p>
-            <p>러닝타임: {movie.runtime}분</p>
-            {/* <p>{movie.title_long}</p>
-            <p>{movie.description_full}</p>
-            <p>{movie.rating}</p>
-            <p>
-              {movie.year}/{movie.runtime}
-            </p>
-            <ul>
-              {movie.genres.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul> */}
+          <div
+            className={styles.detail}
+            style={{
+              backgroundImage: `url(https://image.tmdb.org/t/p/original${movie.backdrop_path})`,
+            }}
+          >
+            <Link to="/" className={styles.back}>
+              <IoArrowBackCircle
+                size={50}
+                style={{
+                  filter: "drop-shadow(0 2px 3px rgba(0,0,0,0.2))",
+                }}
+              />
+            </Link>
+            <div className={styles.overlay}>
+              <h1 className={styles.title}>{movie.title}</h1>
+              <h3 className={styles.tagline}>{movie.tagline}</h3>
+              <p className={styles.overview}>{movie.overview}</p>
+              <ul className={styles.genres}>
+                {movie.genres &&
+                  movie.genres.map((g) => <li key={g.id}>{g.name}</li>)}
+              </ul>
+              <div className={styles.meta}>
+                <p>
+                  평점:{" "}
+                  <StarRating rating={Number(movie.vote_average.toFixed(1))} />
+                </p>
+                <p>러닝타임: {movie.runtime}분</p>
+              </div>
+            </div>
           </div>
         )}
       </div>

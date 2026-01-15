@@ -1,5 +1,6 @@
 import { Rating } from "react-simple-star-rating";
 
+// 별점 컴포넌트
 const StarRating = ({ rating }) => {
     return (
         <Rating
