@@ -1,5 +1,5 @@
 .container{
-    background-color: black;
+    background-color: var(--bg-color);
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -21,13 +21,12 @@
     top: 30px;
     right: 30px;
 
-    color: white;
+    color: var(--off-white-color);
     text-decoration: none;
     font-size: 16px;
     z-index: 10;
 
     padding: 8px 12px;
-    /* background: rgba(0, 0, 0, 0.5); */
     border-radius: 6px;
     transition: opacity 0.3s ease;
 }
@@ -38,7 +37,7 @@
     margin-top: auto;   /* 핵심 */
     position: static;
     padding: 40px;
-    color: white;
+    color: var(--off-white-color);
     cursor: default;
 
     background: linear-gradient(

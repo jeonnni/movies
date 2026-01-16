@@ -1,5 +1,5 @@
 .container {
-    background-color: black;
+    background-color: var(--bg-color);
 }
 .crad {
     display: grid;
@@ -10,6 +10,51 @@
     width: 100%;
     max-width: 1200px; /* 최대폭 제한하고 */
     margin: 0 auto; /* 가운데 정렬 */
+}
+
+/* 버튼 컨테이너 */
+.btn_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 5% 0 10% 0;
+    background-color: var(--main-bg-color);
+}
+
+/* 개별 버튼 스타일 */
+.page_btn {
+    background-color: var(--point-color);
+    color:var(--off-white-color);
+    border: 1px solid #444;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.1s ease-in;
+}
+
+/* 마우스를 올렸을 때 (Hover) */
+.page_btn:hover:not(:disabled) {
+    background-color:var(--blue-color);
+    color: black;
+    border-color:var(--off-white-color);
+}
+
+/* 비활성화 상태 (Disabled) */
+.page_btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    border-color: #333;
+}
+
+/* 현재 페이지 숫자 표시 */
+.page_num {
+    color:var(--white-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    min-width: 30px;
+    text-align: center;
 }
 
 /* 모바일 화면 */

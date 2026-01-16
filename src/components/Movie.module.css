@@ -1,10 +1,9 @@
 .movie_card {
-  background-color: #2f2f2f;
+  background-color: var(--point-color);
   border-radius: 10px;
   overflow: hidden; 
   width: 100%;
-  color: white;
-  
+  color:var(--off-white-color);
 }
 
 .movie_card:hover {
