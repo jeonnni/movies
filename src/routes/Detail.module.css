@@ -51,6 +51,9 @@
 }
 
 /* 제목 */
+.box {
+    display: flex;
+}
 .title {
     font-size: 32px;
     margin-bottom: 8px;

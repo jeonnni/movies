@@ -54,9 +54,10 @@ function Home (){
         <h1 className={styles.logo}>
           MOVIE
           <span className={styles.icon}>
-            <BiSolidCameraMovie />
+            <BiSolidCameraMovie color="var(--blue-color)" />
           </span>
         </h1>
+        <p className={styles.subtitle}>Curated Excellence: Ratings Over 7.0</p>
       </div>
       {loading ? (
         <strong>loading...</strong>
@@ -117,7 +118,7 @@ function Home (){
 
       <div className={styles.footer}>
         <h1 className={styles.footerText}>
-          <span>Copyright ⓒ 2026_MI</span>
+          <span>Copyright ⓒ 2026_MI. All rights reserved.</span>
         </h1>
       </div>
     </div>
