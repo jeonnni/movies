@@ -12,6 +12,46 @@
     margin: 0 auto; /* 가운데 정렬 */
 }
 
+/* 상단 헤더 영역 */
+.header, .footer {
+    background-color: var(--bg-color);
+    padding: 60px 20px 40px; 
+    text-align: center;
+}
+.footerText {
+    color: white;
+    font-size: 12px;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: var(--blue-color);
+    margin: 0;
+    text-transform: uppercase;
+}
+.icon {
+    color: var(--blue-color);
+}
+
+/* 로고의 특정 부분만 포인트 컬러 적용 */
+.logo span {
+    color: var(--white-color); /* 민트 또는 본인이 정한 포인트색 */
+}
+
+
+/* 로딩 박스 중앙 정렬 */
+.loading_box {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-main);
+}
+
+
 /* 버튼 컨테이너 */
 .btn_container {
     display: flex;

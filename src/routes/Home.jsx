@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import styles from "./Home.module.css"
+import { BiSolidCameraMovie } from "react-icons/bi";
 
 // 전체 목록 페이지
 function Home (){
@@ -48,6 +49,15 @@ function Home (){
 
   return (
     <div className={styles.container}>
+      {/* 상단 */}
+      <div className={styles.header}>
+        <h1 className={styles.logo}>
+          MOVIE
+          <span className={styles.icon}>
+            <BiSolidCameraMovie />
+          </span>
+        </h1>
+      </div>
       {loading ? (
         <strong>loading...</strong>
       ) : (
@@ -104,6 +114,12 @@ function Home (){
           </div>
         </>
       )}
+
+      <div className={styles.footer}>
+        <h1 className={styles.footerText}>
+          <span>Copyright ⓒ 2026_MI</span>
+        </h1>
+      </div>
     </div>
   );
 }

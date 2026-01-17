@@ -1,4 +1,4 @@
-import styles from "./App.module.css"
+import styles from "./App.module.css";
 import Detail from "./routes/Detail";
 import Home from "./routes/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -10,6 +10,7 @@ function App() {
         <Routes>
           <Route path="/movie/:id/" element={<Detail />}></Route>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/movies/" element={<Home />}></Route>
         </Routes>
       </Router>
     </div>
