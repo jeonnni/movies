@@ -29,7 +29,9 @@
 
 ## 🎨 UI / UX
 
-- React Icons: 서비스 정체성을 나타내는 카메라 로고 및 UI 아이콘 배치로 시각적 완성도 향상
+- Component Architecture: Header, Footer, Movie Card를 독립 컴포넌트로 분리하여 유지보수성과 확장성을 고려한 구조로 설계
+- React Icons: 서비스 정체성을 나타내는 카메라 로고 및 UI 아이콘을 활용하여 시각적 일관성과 인지성 강화
+- Branding Detail: 파비콘과 하단 로고를 적용하여 서비스 완성도 및 브랜드 인지도 향상
 - react-simple-star-rating: 수치로 된 평점을 별점 형태로 시각화하여 영화 퀄리티를 직관적으로 파악 가능하게 설계
 - Empty State Handling: 조건에 맞는 영화가 없을 경우 사용자에게 친절한 안내 메시지 노출 및 레이아웃 붕괴 방지
 
@@ -52,5 +54,6 @@
 <img width="1920" height="928" alt="스크린샷 2026-01-18 오후 10 07 39" src="https://github.com/user-attachments/assets/1f3aaae1-8b78-4cee-a07f-8d98915f7a93" />
 <img width="1920" height="921" alt="스크린샷 2026-01-18 오후 10 08 14" src="https://github.com/user-attachments/assets/0dec9ea2-a0ac-4f3c-8151-927e595ce925" />
 <img width="1920" height="927" alt="스크린샷 2026-01-18 오후 10 08 27" src="https://github.com/user-attachments/assets/9dbde83b-e058-4e0d-bfaa-e0ca00a4cf7a" />
-
+<img width="1920" height="283" alt="스크린샷 2026-01-19 오전 4 13 07" src="https://github.com/user-attachments/assets/07c41202-b399-4dd9-82c8-d4463a3a1c20" />
+<img width="237" height="38" alt="스크린샷 2026-01-19 오전 4 16 37" src="https://github.com/user-attachments/assets/bf46c906-67dc-4ca6-b29b-2222c8328736" />
 
