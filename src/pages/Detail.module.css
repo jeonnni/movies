@@ -52,11 +52,35 @@
 
 /* 제목 */
 .box {
-    display: flex;
-}
+    display: flex; 
+    flex-direction: row; 
+    /* border: 1px solid red; */
+    align-items: center;      
+    justify-content: space-between; 
+    
+    width: 100%;             
+    margin-bottom: 20px;    
+} 
 .title {
     font-size: 32px;
-    margin-bottom: 8px;
+    margin: 0;
+}
+/* 예고편 보기 */
+.trailer_btn {
+    background-color: var(--white-color); 
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in;
+    white-space: nowrap; /* 글자가 두 줄로 넘어가지 않게 방지 */
+    opacity: 0.7;
+}
+
+.trailer_btn:hover {
+    opacity: 1;
 }
 
 /* 부제목 */

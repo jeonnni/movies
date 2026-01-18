@@ -1,0 +1,18 @@
+.footer{
+    padding-bottom: 60px;
+    width: 100%;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.footerText {
+    color: var(--white-color);
+    font-size: 14px;
+}
+
+.footerLogo {
+  width: 16px;          
+  height: 16px;
+  margin-left: 5px;
+  vertical-align: middle;
+}

@@ -9,41 +9,39 @@ function Detail (){
     const {id} = useParams();
     const [loading, setLoading] = useState(true);
     const [movie, setMovie] = useState(null);
-    console.log(id);
 
-
-    const getMovies = async () => {
-      // token
-      const token = process.env.REACT_APP_TMDB_TOKEN;
-      // 만약 토큰이 없거나 undefined면 여기서 바로 멈추게 함
-      if (!token) {
-        console.error("token 찾을 수 없음.");
-        return;
-      }
-
-      const url = `https://api.themoviedb.org/3/movie/${id}?language=ko-KR&append_to_response=videos`;
-      const options = {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${token.trim()}`,
-          accept: "application/json",
-        },
-      };
-
-      try {
-        const response = await fetch(url, options);
-        const json = await response.json();
-        setMovie(json);
-        setLoading(false);
-      } catch (error) {
-        console.error("상세 정보 가져오기 실패:", error);
-      }
-    }
     useEffect(() => {
         document.body.style.overflow = "hidden";
         window.scrollTo(0, 0);  
         
-        getMovies();   
+        const getMovies = async () => {
+          // token
+          const token = process.env.REACT_APP_TMDB_TOKEN;
+          // 만약 토큰이 없거나 undefined면 여기서 바로 멈추게 함
+          if (!token) {
+            console.error("token 찾을 수 없음.");
+            return;
+          }
+
+          const url = `https://api.themoviedb.org/3/movie/${id}?language=ko-KR&append_to_response=videos`;
+          const options = {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${token.trim()}`,
+              accept: "application/json",
+            },
+          };
+
+          try {
+            const response = await fetch(url, options);
+            const json = await response.json();
+            setMovie(json);
+            setLoading(false);
+          } catch (error) {
+            console.error("상세 정보 가져오기 실패:", error);
+          }
+        };  
+        getMovies();
 
         return () => {
           document.body.style.overflow = "";
@@ -95,7 +93,9 @@ function Detail (){
             <div className={styles.overlay}>
               <div className={styles.box}>
                 <h1 className={styles.title}>{movie.title}</h1>
-                <button onClick={showYouTube}>예고편 보기</button>
+                <button onClick={showYouTube} className={styles.trailer_btn}>
+                  예고편 보기
+                </button>
               </div>
               <h3 className={styles.tagline}>{movie.tagline}</h3>
               <p className={styles.overview}>{movie.overview}</p>

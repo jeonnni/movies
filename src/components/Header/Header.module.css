@@ -1,0 +1,68 @@
+/* 상단 헤더, 푸터 영역 */
+.header {
+    width: 100%;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+.header{
+    padding: 40px 0 20px 0px; 
+}
+
+/* 상단 제목 */
+.logo {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: var(--white-color);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.icon {
+    color: var(--blue-color);
+    font-size: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle; /* 글자와 수평 */
+    margin-left: 10px; /* 글자와의 간격 */
+}
+
+/* 상단 부제목 */
+.subtitle {
+    color: var(--off-white-color);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px; 
+    text-transform: uppercase;
+}
+
+/* 상단 평점 옵션 */
+.filter_container {
+    /* background-color: rgba(255, 255, 255, 0.536); */
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: var(--off-white-color);
+    font-weight: 500;
+    padding: 10px 0;
+    display: flex;
+    justify-content: right;
+}
+
+.select {
+    padding: 8px 15px;
+    background-color: var(--bg-color);
+    color: var(--off-white-color);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    border: 2px solid var(--off-white-color);
+}
+
+.select:hover {
+    opacity: 0.5;
+}

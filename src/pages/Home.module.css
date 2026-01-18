@@ -1,5 +1,17 @@
 .container {
     background-color: var(--bg-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+/* 영화가 없을 때 */
+.noMovies {
+    padding: 5%;
+    font-size: 20px;
+    text-align: center;
+    color: var(--off-white-color);
+    font-weight: bold;
 }
 
 /* 로딩 박스 중앙 정렬 */
@@ -12,62 +24,13 @@
 }
 
 .crad {
+    width: 100%;
     display: grid;
     /* 1fr(비율)을 4번 반복하여 4열로 만듦 */
     grid-template-columns: repeat(4, 1fr); 
     grid-gap: 25px; /* 카드 사이 간격 */
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px; /* 최대폭 제한하고 */
-    margin: 0 auto; /* 가운데 정렬 */
 }
 
-/* 상단 헤더, 푸터 영역 */
-.header, .footer {
-    background-color: var(--bg-color);
-    text-align: center;
-}
-.header{
-    padding: 40px 20px 40px; 
-}
-.footer{
-    padding-bottom: 60px;
-}
-
-/* 상단 제목 */
-.logo {
-    font-family: 'Space Grotesk', sans-serif !important;
-    font-size: 3.5rem;
-    font-weight: 900;
-    letter-spacing: -2px;
-    color: var(--white-color);
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.icon {
-    color: var(--blue-color);
-    font-size: 2.5rem;
-    display: inline-flex;
-    align-items: center;
-    vertical-align: middle; /* 글자와 수평 */
-    margin-left: 10px; /* 글자와의 간격 */
-}
-
-/* 상단 부제목 */
-.subtitle {
-    color: var(--off-white-color);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 3px; 
-    text-transform: uppercase;
-}
-
-/* 하단 푸터 */
-.footerText {
-    color: var(--white-color);
-    font-size: 14px;
-}
 
 
 /* 하단 버튼 컨테이너 */
@@ -127,3 +90,6 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+
+
