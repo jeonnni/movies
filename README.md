@@ -48,8 +48,9 @@
 - Conditional Formatting: API 응답 결과의 유무에 따른 조건부 렌더링으로 안정적인 사용자 경험(UX) 제공
 
 ## 📷 Preview
-![화면 기록 2026-01-18 오후 9 55 12](https://github.com/user-attachments/assets/e34997e7-32aa-4447-9231-cb794919327f)
-
-
+<img width="1920" height="928" alt="스크린샷 2026-01-18 오후 10 07 18" src="https://github.com/user-attachments/assets/d65888c8-79a2-4401-8814-89286fd6cb18" />
+<img width="1920" height="928" alt="스크린샷 2026-01-18 오후 10 07 39" src="https://github.com/user-attachments/assets/1f3aaae1-8b78-4cee-a07f-8d98915f7a93" />
+<img width="1920" height="921" alt="스크린샷 2026-01-18 오후 10 08 14" src="https://github.com/user-attachments/assets/0dec9ea2-a0ac-4f3c-8151-927e595ce925" />
+<img width="1920" height="927" alt="스크린샷 2026-01-18 오후 10 08 27" src="https://github.com/user-attachments/assets/9dbde83b-e058-4e0d-bfaa-e0ca00a4cf7a" />
 
 
